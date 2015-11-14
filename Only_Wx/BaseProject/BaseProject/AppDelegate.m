@@ -14,6 +14,7 @@
 #import "WXMobilePhoneNetManager.h"
 #import "MainViewController.h"
 #import "WelcomeViewController.h"
+#import "CarNetManager.h"
 @interface AppDelegate ()
 
 @end
@@ -26,10 +27,17 @@
     [WXMobilePhoneNetManager getMobilePhoneWithIndex:0 completionHandle:^(id model, NSError *error) {
         DDLogVerbose(@"....");
     }];
+    [CarNetManager getCarWithIndex:0 completionHandle:^(id model, NSError *error) {
+        DDLogVerbose(@"...");
+    }];
    // WelcomeViewController *vc = [WelcomeViewController new];
     //self.window.rootViewController = vc;
     self.window.rootViewController = self.sideMenu;
         [self configGlobalUIStyle]; //配置全局UI样式
+    
+    
+    
+    
     
     return YES;
 }

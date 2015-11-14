@@ -11,6 +11,7 @@
 #import "ManHuaViewModel.h"
 #import "Factory.h"
 #import "ManHuaDetailViewController.h"
+#import "BigImgCell.h"
 
 @interface ManHuaViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
@@ -74,6 +75,7 @@
             }];
         }];
         [_tableView registerClass:[MobilePhoneListCell class] forCellReuseIdentifier:@"Cell"];
+        [_tableView registerClass:[BigImgCell class] forCellReuseIdentifier:@"BigCell"];
         
     }
     return _tableView;
@@ -85,6 +87,22 @@
 kRemoveCellSeparator
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.row == 0) {
+        BigImgCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BigCell"];
+        cell.titleLb.text = [self.phoneVM titleForRow:indexPath.row];
+        [cell.iconIV.imageView setImageWithURL:[self.phoneVM iconIVURLForRow:indexPath.row]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
+        return cell;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     MobilePhoneListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.titleLb.text = [self.phoneVM titleForRow:indexPath.row];
     cell.digestLb.text = [self.phoneVM digestForRow:indexPath.row];
@@ -95,7 +113,12 @@ kRemoveCellSeparator
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.row == 0) {
+        return 200;
+    }else{
     return 80;
+}
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -68,8 +68,6 @@
 		854A34001BF5DDB50027B08A /* WXManHuaNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 854A33FF1BF5DDB50027B08A /* WXManHuaNetManager.m */; };
 		854A34031BF5DFCB0027B08A /* ManHuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854A34021BF5DFCB0027B08A /* ManHuaViewController.m */; };
 		854A34061BF5E28A0027B08A /* ManHuaViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 854A34051BF5E28A0027B08A /* ManHuaViewModel.m */; };
-		854A34081BF604F80027B08A /* 1711818_105836095_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854A34071BF604F80027B08A /* 1711818_105836095_2.jpg */; };
-		854A340A1BF605670027B08A /* 25b1OOOPIC19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854A34091BF605670027B08A /* 25b1OOOPIC19.jpg */; };
 		854A340D1BF609E40027B08A /* MainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854A340C1BF609E40027B08A /* MainDetailViewController.m */; };
 		854A34101BF615DB0027B08A /* ManHuaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854A340F1BF615DB0027B08A /* ManHuaDetailViewController.m */; };
 		8584743E1BEC6A4300B54A08 /* WMFooldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858474341BEC6A4300B54A08 /* WMFooldView.m */; };
@@ -83,6 +81,22 @@
 		85C9BF891BF41C8000D5A6BD /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9BF881BF41C8000D5A6BD /* Factory.m */; };
 		85C9BF8C1BF4201E00D5A6BD /* MobilePhoneListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9BF8B1BF4201E00D5A6BD /* MobilePhoneListCell.m */; };
 		85C9BF9B1BF4507C00D5A6BD /* MobilePhoneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9BF9A1BF4507C00D5A6BD /* MobilePhoneViewModel.m */; };
+		85DA4C0F1BF6C9B30057D570 /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C0B1BF6C9B30057D570 /* AlbumModel.m */; };
+		85DA4C101BF6C9B30057D570 /* RankingListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C0D1BF6C9B30057D570 /* RankingListModel.m */; };
+		85DA4C131BF6C9D10057D570 /* XiMaNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C121BF6C9D10057D570 /* XiMaNetManager.m */; };
+		85DA4C161BF6C9FA0057D570 /* XiMaCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C151BF6C9FA0057D570 /* XiMaCategoryCell.m */; };
+		85DA4C1C1BF6CA0F0057D570 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C191BF6CA0F0057D570 /* MusicListViewController.m */; };
+		85DA4C1D1BF6CA0F0057D570 /* RankListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C1B1BF6CA0F0057D570 /* RankListViewController.m */; };
+		85DA4C231BF6CA1F0057D570 /* XiMaAlbumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C201BF6CA1F0057D570 /* XiMaAlbumViewModel.m */; };
+		85DA4C241BF6CA1F0057D570 /* XiMaCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C221BF6CA1F0057D570 /* XiMaCategoryViewModel.m */; };
+		85DA4C271BF6CAA00057D570 /* MusicDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C261BF6CAA00057D570 /* MusicDetailCell.m */; };
+		85DA4C2A1BF6CAAA0057D570 /* PlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C291BF6CAAA0057D570 /* PlayView.m */; };
+		85DA4C2C1BF6CDC10057D570 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DA4C2B1BF6CDC10057D570 /* AVFoundation.framework */; };
+		85DA4C311BF6DE720057D570 /* BigImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C301BF6DE720057D570 /* BigImgCell.m */; };
+		85DA4C341BF6FD7B0057D570 /* WXCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C331BF6FD7B0057D570 /* WXCarModel.m */; };
+		85DA4C371BF711450057D570 /* CarNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C361BF711450057D570 /* CarNetManager.m */; };
+		85DA4C3A1BF713B10057D570 /* CarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C391BF713B10057D570 /* CarViewModel.m */; };
+		85DA4C3D1BF730130057D570 /* CarListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C3C1BF730130057D570 /* CarListCell.m */; };
 		85E3A19C1BEADCBC0082B62E /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3A19B1BEADCBC0082B62E /* WelcomeViewController.m */; };
 		85E3A1A61BEADFEA0082B62E /* Welcome.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85E3A1A51BEADFEA0082B62E /* Welcome.bundle */; };
 		85E3A2141BEB1C530082B62E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3A2131BEB1C530082B62E /* MainViewController.m */; };
@@ -190,8 +204,6 @@
 		854A34021BF5DFCB0027B08A /* ManHuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManHuaViewController.m; sourceTree = "<group>"; };
 		854A34041BF5E28A0027B08A /* ManHuaViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManHuaViewModel.h; sourceTree = "<group>"; };
 		854A34051BF5E28A0027B08A /* ManHuaViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManHuaViewModel.m; sourceTree = "<group>"; };
-		854A34071BF604F80027B08A /* 1711818_105836095_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1711818_105836095_2.jpg; sourceTree = "<group>"; };
-		854A34091BF605670027B08A /* 25b1OOOPIC19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 25b1OOOPIC19.jpg; sourceTree = "<group>"; };
 		854A340B1BF609E40027B08A /* MainDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDetailViewController.h; sourceTree = "<group>"; };
 		854A340C1BF609E40027B08A /* MainDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDetailViewController.m; sourceTree = "<group>"; };
 		854A340E1BF615DB0027B08A /* ManHuaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManHuaDetailViewController.h; sourceTree = "<group>"; };
@@ -219,6 +231,38 @@
 		85C9BF8B1BF4201E00D5A6BD /* MobilePhoneListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePhoneListCell.m; sourceTree = "<group>"; };
 		85C9BF991BF4507C00D5A6BD /* MobilePhoneViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePhoneViewModel.h; sourceTree = "<group>"; };
 		85C9BF9A1BF4507C00D5A6BD /* MobilePhoneViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePhoneViewModel.m; sourceTree = "<group>"; };
+		85DA4C0A1BF6C9B30057D570 /* AlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumModel.h; sourceTree = "<group>"; };
+		85DA4C0B1BF6C9B30057D570 /* AlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumModel.m; sourceTree = "<group>"; };
+		85DA4C0C1BF6C9B30057D570 /* RankingListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingListModel.h; sourceTree = "<group>"; };
+		85DA4C0D1BF6C9B30057D570 /* RankingListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingListModel.m; sourceTree = "<group>"; };
+		85DA4C0E1BF6C9B30057D570 /* XiMaLaYaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiMaLaYaModel.h; sourceTree = "<group>"; };
+		85DA4C111BF6C9D10057D570 /* XiMaNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiMaNetManager.h; sourceTree = "<group>"; };
+		85DA4C121BF6C9D10057D570 /* XiMaNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiMaNetManager.m; sourceTree = "<group>"; };
+		85DA4C141BF6C9FA0057D570 /* XiMaCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiMaCategoryCell.h; sourceTree = "<group>"; };
+		85DA4C151BF6C9FA0057D570 /* XiMaCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiMaCategoryCell.m; sourceTree = "<group>"; };
+		85DA4C181BF6CA0F0057D570 /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
+		85DA4C191BF6CA0F0057D570 /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
+		85DA4C1A1BF6CA0F0057D570 /* RankListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankListViewController.h; sourceTree = "<group>"; };
+		85DA4C1B1BF6CA0F0057D570 /* RankListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankListViewController.m; sourceTree = "<group>"; };
+		85DA4C1F1BF6CA1F0057D570 /* XiMaAlbumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiMaAlbumViewModel.h; sourceTree = "<group>"; };
+		85DA4C201BF6CA1F0057D570 /* XiMaAlbumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiMaAlbumViewModel.m; sourceTree = "<group>"; };
+		85DA4C211BF6CA1F0057D570 /* XiMaCategoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiMaCategoryViewModel.h; sourceTree = "<group>"; };
+		85DA4C221BF6CA1F0057D570 /* XiMaCategoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiMaCategoryViewModel.m; sourceTree = "<group>"; };
+		85DA4C251BF6CAA00057D570 /* MusicDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDetailCell.h; sourceTree = "<group>"; };
+		85DA4C261BF6CAA00057D570 /* MusicDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDetailCell.m; sourceTree = "<group>"; };
+		85DA4C281BF6CAAA0057D570 /* PlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayView.h; sourceTree = "<group>"; };
+		85DA4C291BF6CAAA0057D570 /* PlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayView.m; sourceTree = "<group>"; };
+		85DA4C2B1BF6CDC10057D570 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		85DA4C2F1BF6DE720057D570 /* BigImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImgCell.h; sourceTree = "<group>"; };
+		85DA4C301BF6DE720057D570 /* BigImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImgCell.m; sourceTree = "<group>"; };
+		85DA4C321BF6FD7B0057D570 /* WXCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCarModel.h; sourceTree = "<group>"; };
+		85DA4C331BF6FD7B0057D570 /* WXCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCarModel.m; sourceTree = "<group>"; };
+		85DA4C351BF711450057D570 /* CarNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarNetManager.h; sourceTree = "<group>"; };
+		85DA4C361BF711450057D570 /* CarNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarNetManager.m; sourceTree = "<group>"; };
+		85DA4C381BF713B10057D570 /* CarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewModel.h; sourceTree = "<group>"; };
+		85DA4C391BF713B10057D570 /* CarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewModel.m; sourceTree = "<group>"; };
+		85DA4C3B1BF730130057D570 /* CarListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListCell.h; sourceTree = "<group>"; };
+		85DA4C3C1BF730130057D570 /* CarListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListCell.m; sourceTree = "<group>"; };
 		85E3A19A1BEADCBC0082B62E /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		85E3A19B1BEADCBC0082B62E /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		85E3A1A51BEADFEA0082B62E /* Welcome.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Welcome.bundle; sourceTree = "<group>"; };
@@ -234,6 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DA4C2C1BF6CDC10057D570 /* AVFoundation.framework in Frameworks */,
 				3885C90B1BE8EA70009441EA /* libz.tbd in Frameworks */,
 				3885C9091BE8EA6A009441EA /* libstdc++.tbd in Frameworks */,
 				3885C9071BE8EA62009441EA /* CoreTelephony.framework in Frameworks */,
@@ -467,12 +512,15 @@
 		3886C0B01BD74A4A0014E661 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				85DA4C091BF6C9B30057D570 /* 喜马拉雅 */,
 				3886C0BF1BD74B090014E661 /* BaseModel.h */,
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
 				85887C1D1BF36E0800E02E75 /* WXMobilePhoneModel.h */,
 				85887C1E1BF36E0800E02E75 /* WXMobilePhoneModel.m */,
 				854A33FB1BF5DC4A0027B08A /* WXManHuaModel.h */,
 				854A33FC1BF5DC4A0027B08A /* WXManHuaModel.m */,
+				85DA4C321BF6FD7B0057D570 /* WXCarModel.h */,
+				85DA4C331BF6FD7B0057D570 /* WXCarModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,6 +534,10 @@
 				85887C211BF3702300E02E75 /* WXMobilePhoneNetManager.m */,
 				854A33FE1BF5DDB50027B08A /* WXManHuaNetManager.h */,
 				854A33FF1BF5DDB50027B08A /* WXManHuaNetManager.m */,
+				85DA4C111BF6C9D10057D570 /* XiMaNetManager.h */,
+				85DA4C121BF6C9D10057D570 /* XiMaNetManager.m */,
+				85DA4C351BF711450057D570 /* CarNetManager.h */,
+				85DA4C361BF711450057D570 /* CarNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -494,8 +546,6 @@
 			isa = PBXGroup;
 			children = (
 				3886C0A21BD748830014E661 /* Assets.xcassets */,
-				854A34071BF604F80027B08A /* 1711818_105836095_2.jpg */,
-				854A34091BF605670027B08A /* 25b1OOOPIC19.jpg */,
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
 				3886C0B81BD74A700014E661 /* PrefixHeader.pch */,
@@ -533,6 +583,16 @@
 				85C9BF851BF418C100D5A6BD /* TRImageView.m */,
 				85C9BF8A1BF4201E00D5A6BD /* MobilePhoneListCell.h */,
 				85C9BF8B1BF4201E00D5A6BD /* MobilePhoneListCell.m */,
+				85DA4C2F1BF6DE720057D570 /* BigImgCell.h */,
+				85DA4C301BF6DE720057D570 /* BigImgCell.m */,
+				85DA4C141BF6C9FA0057D570 /* XiMaCategoryCell.h */,
+				85DA4C151BF6C9FA0057D570 /* XiMaCategoryCell.m */,
+				85DA4C251BF6CAA00057D570 /* MusicDetailCell.h */,
+				85DA4C261BF6CAA00057D570 /* MusicDetailCell.m */,
+				85DA4C281BF6CAAA0057D570 /* PlayView.h */,
+				85DA4C291BF6CAAA0057D570 /* PlayView.m */,
+				85DA4C3B1BF730130057D570 /* CarListCell.h */,
+				85DA4C3C1BF730130057D570 /* CarListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,6 +600,7 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				85DA4C171BF6CA0F0057D570 /* 喜马拉雅 */,
 				85E3A19A1BEADCBC0082B62E /* WelcomeViewController.h */,
 				85E3A19B1BEADCBC0082B62E /* WelcomeViewController.m */,
 				85E3A2121BEB1C530082B62E /* MainViewController.h */,
@@ -559,12 +620,15 @@
 		3886C0B71BD74A4A0014E661 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				85DA4C1E1BF6CA1F0057D570 /* 喜马拉雅 */,
 				3886C0B91BD74AE90014E661 /* BaseViewModel.h */,
 				3886C0BA1BD74AE90014E661 /* BaseViewModel.m */,
 				85C9BF991BF4507C00D5A6BD /* MobilePhoneViewModel.h */,
 				85C9BF9A1BF4507C00D5A6BD /* MobilePhoneViewModel.m */,
 				854A34041BF5E28A0027B08A /* ManHuaViewModel.h */,
 				854A34051BF5E28A0027B08A /* ManHuaViewModel.m */,
+				85DA4C381BF713B10057D570 /* CarViewModel.h */,
+				85DA4C391BF713B10057D570 /* CarViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -596,6 +660,40 @@
 			path = WMMenuView;
 			sourceTree = "<group>";
 		};
+		85DA4C091BF6C9B30057D570 /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+				85DA4C0A1BF6C9B30057D570 /* AlbumModel.h */,
+				85DA4C0B1BF6C9B30057D570 /* AlbumModel.m */,
+				85DA4C0C1BF6C9B30057D570 /* RankingListModel.h */,
+				85DA4C0D1BF6C9B30057D570 /* RankingListModel.m */,
+				85DA4C0E1BF6C9B30057D570 /* XiMaLaYaModel.h */,
+			);
+			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
+		85DA4C171BF6CA0F0057D570 /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+				85DA4C181BF6CA0F0057D570 /* MusicListViewController.h */,
+				85DA4C191BF6CA0F0057D570 /* MusicListViewController.m */,
+				85DA4C1A1BF6CA0F0057D570 /* RankListViewController.h */,
+				85DA4C1B1BF6CA0F0057D570 /* RankListViewController.m */,
+			);
+			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
+		85DA4C1E1BF6CA1F0057D570 /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+				85DA4C1F1BF6CA1F0057D570 /* XiMaAlbumViewModel.h */,
+				85DA4C201BF6CA1F0057D570 /* XiMaAlbumViewModel.m */,
+				85DA4C211BF6CA1F0057D570 /* XiMaCategoryViewModel.h */,
+				85DA4C221BF6CA1F0057D570 /* XiMaCategoryViewModel.m */,
+			);
+			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
 		DEB62B47C560AA65E07ECFA4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +706,7 @@
 		FA3445AEA3874C1D4FE61EAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85DA4C2B1BF6CDC10057D570 /* AVFoundation.framework */,
 				3885C90A1BE8EA70009441EA /* libz.tbd */,
 				3885C9081BE8EA6A009441EA /* libstdc++.tbd */,
 				3885C9061BE8EA62009441EA /* CoreTelephony.framework */,
@@ -688,7 +787,6 @@
 				3885C8D61BE8E8FB009441EA /* UMSCommentInputController.xib in Resources */,
 				3885C8E51BE8E8FB009441EA /* ios-social-sdk-comment-detail.html in Resources */,
 				3886C0A31BD748830014E661 /* Assets.xcassets in Resources */,
-				854A340A1BF605670027B08A /* 25b1OOOPIC19.jpg in Resources */,
 				3885C8EB1BE8E8FB009441EA /* ios-social-sdk-share-detail.html in Resources */,
 				3885C8EC1BE8E8FB009441EA /* ios-social-sdk-share-quick.html in Resources */,
 				3885C8F71BE8E96A009441EA /* .gitignore in Resources */,
@@ -700,7 +798,6 @@
 				3885C8E41BE8E8FB009441EA /* iOS-social-releasenote.html in Resources */,
 				3885C8DA1BE8E8FB009441EA /* UMSLoginViewController.xib in Resources */,
 				3885C8E31BE8E8FB009441EA /* iOS-social-analytics-releasenote.html in Resources */,
-				854A34081BF604F80027B08A /* 1711818_105836095_2.jpg in Resources */,
 				3885C8D71BE8E8FB009441EA /* UMSCommentInputControlleriPad.xib in Resources */,
 				3885C8D91BE8E8FB009441EA /* UMShareEditViewControlleriPad.xib in Resources */,
 				3886C0AE1BD749A00014E661 /* LaunchScreen.xib in Resources */,
@@ -774,11 +871,13 @@
 			files = (
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				85887C1F1BF36E0800E02E75 /* WXMobilePhoneModel.m in Sources */,
+				85DA4C311BF6DE720057D570 /* BigImgCell.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				3885C8FA1BE8E96A009441EA /* PSCollectionViewCell.m in Sources */,
 				854A34001BF5DDB50027B08A /* WXManHuaNetManager.m in Sources */,
 				854A34061BF5E28A0027B08A /* ManHuaViewModel.m in Sources */,
 				854A33FD1BF5DC4A0027B08A /* WXManHuaModel.m in Sources */,
+				85DA4C0F1BF6C9B30057D570 /* AlbumModel.m in Sources */,
 				85C9BF861BF418C100D5A6BD /* TRImageView.m in Sources */,
 				85C9BF891BF41C8000D5A6BD /* Factory.m in Sources */,
 				854A34101BF615DB0027B08A /* ManHuaDetailViewController.m in Sources */,
@@ -787,22 +886,35 @@
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				854A340D1BF609E40027B08A /* MainDetailViewController.m in Sources */,
 				8584743F1BEC6A4300B54A08 /* WMMenuItem.m in Sources */,
+				85DA4C341BF6FD7B0057D570 /* WXCarModel.m in Sources */,
+				85DA4C271BF6CAA00057D570 /* MusicDetailCell.m in Sources */,
 				85E3A19C1BEADCBC0082B62E /* WelcomeViewController.m in Sources */,
 				858474411BEC6A4300B54A08 /* WMProgressView.m in Sources */,
 				858474401BEC6A4300B54A08 /* WMMenuView.m in Sources */,
+				85DA4C241BF6CA1F0057D570 /* XiMaCategoryViewModel.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
+				85DA4C371BF711450057D570 /* CarNetManager.m in Sources */,
+				85DA4C1D1BF6CA0F0057D570 /* RankListViewController.m in Sources */,
 				85E3A2171BEB1E930082B62E /* LeftViewController.m in Sources */,
+				85DA4C2A1BF6CAAA0057D570 /* PlayView.m in Sources */,
 				8584743E1BEC6A4300B54A08 /* WMFooldView.m in Sources */,
 				85887C221BF3702300E02E75 /* WXMobilePhoneNetManager.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
+				85DA4C231BF6CA1F0057D570 /* XiMaAlbumViewModel.m in Sources */,
 				85C9BF9B1BF4507C00D5A6BD /* MobilePhoneViewModel.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
+				85DA4C1C1BF6CA0F0057D570 /* MusicListViewController.m in Sources */,
+				85DA4C3A1BF713B10057D570 /* CarViewModel.m in Sources */,
 				858474421BEC6A4300B54A08 /* WMPageController.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				85E3A2141BEB1C530082B62E /* MainViewController.m in Sources */,
+				85DA4C3D1BF730130057D570 /* CarListCell.m in Sources */,
+				85DA4C131BF6C9D10057D570 /* XiMaNetManager.m in Sources */,
+				85DA4C161BF6C9FA0057D570 /* XiMaCategoryCell.m in Sources */,
+				85DA4C101BF6C9B30057D570 /* RankingListModel.m in Sources */,
 				85C9BF8C1BF4201E00D5A6BD /* MobilePhoneListCell.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 			);

@@ -33,6 +33,12 @@
     btn.frame = CGRectMake(0, 0, 45, 44);
     [btn bk_addEventHandler:^(id sender) {
         [vc.navigationController popViewControllerAnimated:YES];
+        
+        
+        
+        
+        
+        
     } forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *menuItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
     //使用弹簧控件缩小菜单按钮和边缘距离

@@ -12,6 +12,7 @@
 #import "MobilePhoneViewModel.h"
 #import "Factory.h"
 #import "MainDetailViewController.h"
+#import "BigImgCell.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -24,7 +25,8 @@
     static UINavigationController *navi = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        MainViewController *vc = [[MainViewController alloc]init];                         navi = [[UINavigationController alloc] initWithRootViewController:vc];
+        MainViewController *vc = [[MainViewController alloc]init];
+        navi = [[UINavigationController alloc] initWithRootViewController:vc];
     });
     return navi;
 }
@@ -74,6 +76,7 @@
             }];
         }];
         [_tableView registerClass:[MobilePhoneListCell class] forCellReuseIdentifier:@"Cell"];
+        [_tableView registerClass:[BigImgCell class] forCellReuseIdentifier:@"BigCell"];
         
     }
     return _tableView;
@@ -85,6 +88,14 @@
 kRemoveCellSeparator
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.row == 0) {
+        BigImgCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BigCell"];
+        cell.titleLb.text = [self.phoneVM titleForRow:indexPath.row];
+        [cell.iconIV.imageView setImageWithURL:[self.phoneVM iconIVURLForRow:indexPath.row]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
+        return cell;
+
+    }else{
     MobilePhoneListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.titleLb.text = [self.phoneVM titleForRow:indexPath.row];
     cell.digestLb.text = [self.phoneVM digestForRow:indexPath.row];
@@ -92,10 +103,15 @@ kRemoveCellSeparator
     
     [cell.iconIV.imageView setImageWithURL:[self.phoneVM iconIVURLForRow:indexPath.row]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
     return cell;
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0) {
+        return 200;
+    }else{
     return 80;
+    }
 }
 
 

@@ -10,6 +10,7 @@
 #import <NSString+Icons.h>
 #import "MainViewController.h"
 #import "ManHuaViewController.h"
+#import "RankListViewController.h"
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *itemNames;
@@ -17,7 +18,7 @@
 
 @implementation LeftViewController
 - (NSArray *)itemNames{
-    return @[@"手机", @"漫画", @"汽车", @"健康"];
+    return @[@"手机", @"漫画", @"汽车", @"健康",@"音乐"];
 }
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -69,6 +70,14 @@ kRemoveCellSeparator
         case 2:
             
             break;
+        case 3:
+            
+            break;
+        case 4:
+            [self.sideMenuViewController setContentViewController:[RankListViewController defaultNavi] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+
+            break;
         default:
             break;
     }
@@ -79,15 +88,23 @@ kRemoveCellSeparator
 
     
     self.view.backgroundColor = [UIColor greenSeaColor];
+    
+    UIImageView *imageViewbk = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"7132"]];
+    [self.view addSubview:imageViewbk];
+    [imageViewbk mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
     [self.tableView reloadData];
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(10, 40, kWindowW/2+50, 180)];
-    //headView.backgroundColor = [UIColor yellowColor];
+    
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(10, 40, 100, 100)];
+    headView.layer.cornerRadius = 100/2;
+    headView.clipsToBounds = YES;
     UIView *footView = [UIView new];
-    //footView.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:footView];
+    
+    [imageViewbk addSubview:footView];
     [footView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(-20);
-        make.left.mas_equalTo(10);
+        make.bottom.mas_equalTo(-30);
+        make.left.mas_equalTo(20);
         make.size.mas_equalTo(CGSizeMake(kWindowW/2+50, 50));
     }];
     UILabel *label = [UILabel new];
@@ -100,27 +117,15 @@ kRemoveCellSeparator
     }];
     
     [self.view addSubview:headView];
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"10979715_0800"]];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"touxiang3"]];
+    
+    imageView.layer.cornerRadius = 50;
+    
     [headView addSubview:imageView];
     
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
