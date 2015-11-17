@@ -18,15 +18,20 @@
 @implementation WXCarListModel
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"ads" : [WXCarListAdsModel class], @"auto_wap" : [WXCarListAutoWapModel class]};
+    return @{@"ads" : [WXCarListAdsModel class], @"auto_wap" : [WXCarListAutoWapModel class],@"imgextra":[WXCarListImageXtraModel class]};
 }
+//@"imgextra":[WXCarListImageXtraModel class]
 + (NSDictionary *)replacedKeyFromPropertyName
 {
     return @{@"cTemplate":@"template"};
 }
 
 @end
+@implementation WXCarListImageXtraModel
 
+
+
+@end
 
 @implementation WXCarListAdsModel
 

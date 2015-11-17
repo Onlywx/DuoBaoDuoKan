@@ -12,27 +12,30 @@
 @property (nonatomic,assign)NSInteger rowNumber;
 @property (nonatomic,assign)NSInteger index;
 
-@property (nonatomic,strong)NSMutableArray *adsImgsrc;
-
-
 - (NSString *)titleForRow:(NSInteger)row;
 - (NSString *)replyCountForRow:(NSInteger)row;
 - (NSString *)digestForRow:(NSInteger)row;
 - (NSURL *)iconIVURLForRow:(NSInteger)row;
+
 /** 获取列表中某行数据对应的下一页链接 */
 - (NSURL *)detailURLForRowInList:(NSInteger)row;
 
-/** 获取广告图*/
-- (NSURL *)adsImgsrcForRow:(NSInteger)row;
-/** 获取imgextra图*/
-- (NSURL *)imgextraURLForRow:(NSInteger)row;
-/** 获取auto_wap图*/
-- (NSURL *)autowapURLForRow:(NSInteger)row;
+
 
 /** ads数组*/
 - (NSArray *)adsForRow:(NSInteger)row;
-/** imgextra数组*/
+/** 通过行数 返回此行中对应的图片链接数组 */
 - (NSArray *)imgextraForRow:(NSInteger)row;
 /** auto_wap数组*/
 - (NSArray *)autowapForRow:(NSInteger)row;
+
+
+/** 是否存在imgextra*/
+- (BOOL)containImgextra:(NSInteger)row;
+
+
+
+
+
+
 @end

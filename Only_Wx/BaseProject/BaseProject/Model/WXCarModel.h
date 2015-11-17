@@ -9,6 +9,7 @@
 #import "BaseModel.h"
 
 @class WXCarListModel,WXCarListAdsModel,WXCarListAutoWapModel,WXCarListImageXtraModel;
+
 @interface WXCarModel : BaseModel
 
 @property (nonatomic, copy) NSString *city;
@@ -74,9 +75,11 @@
 @property (nonatomic, strong) NSArray<WXCarListImageXtraModel *> *imgextra;
 
 @end
+
 @interface WXCarListImageXtraModel : NSObject
 @property (nonatomic, copy) NSString *imgsrc;
 @end
+
 @interface WXCarListAdsModel : NSObject
 
 @property (nonatomic, copy) NSString *url;

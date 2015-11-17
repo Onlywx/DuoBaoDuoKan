@@ -97,6 +97,7 @@
 		85DA4C371BF711450057D570 /* CarNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C361BF711450057D570 /* CarNetManager.m */; };
 		85DA4C3A1BF713B10057D570 /* CarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C391BF713B10057D570 /* CarViewModel.m */; };
 		85DA4C3D1BF730130057D570 /* CarListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DA4C3C1BF730130057D570 /* CarListCell.m */; };
+		85DAEC141BF9673000911E6F /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DAEC131BF9673000911E6F /* CarViewController.m */; };
 		85E3A19C1BEADCBC0082B62E /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3A19B1BEADCBC0082B62E /* WelcomeViewController.m */; };
 		85E3A1A61BEADFEA0082B62E /* Welcome.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85E3A1A51BEADFEA0082B62E /* Welcome.bundle */; };
 		85E3A2141BEB1C530082B62E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3A2131BEB1C530082B62E /* MainViewController.m */; };
@@ -263,6 +264,8 @@
 		85DA4C391BF713B10057D570 /* CarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewModel.m; sourceTree = "<group>"; };
 		85DA4C3B1BF730130057D570 /* CarListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListCell.h; sourceTree = "<group>"; };
 		85DA4C3C1BF730130057D570 /* CarListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListCell.m; sourceTree = "<group>"; };
+		85DAEC121BF9673000911E6F /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
+		85DAEC131BF9673000911E6F /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
 		85E3A19A1BEADCBC0082B62E /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		85E3A19B1BEADCBC0082B62E /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		85E3A1A51BEADFEA0082B62E /* Welcome.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Welcome.bundle; sourceTree = "<group>"; };
@@ -579,18 +582,13 @@
 		3886C0B51BD74A4A0014E661 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85DAEC111BF95EE200911E6F /* 喜马拉雅 */,
 				85C9BF841BF418C100D5A6BD /* TRImageView.h */,
 				85C9BF851BF418C100D5A6BD /* TRImageView.m */,
 				85C9BF8A1BF4201E00D5A6BD /* MobilePhoneListCell.h */,
 				85C9BF8B1BF4201E00D5A6BD /* MobilePhoneListCell.m */,
 				85DA4C2F1BF6DE720057D570 /* BigImgCell.h */,
 				85DA4C301BF6DE720057D570 /* BigImgCell.m */,
-				85DA4C141BF6C9FA0057D570 /* XiMaCategoryCell.h */,
-				85DA4C151BF6C9FA0057D570 /* XiMaCategoryCell.m */,
-				85DA4C251BF6CAA00057D570 /* MusicDetailCell.h */,
-				85DA4C261BF6CAA00057D570 /* MusicDetailCell.m */,
-				85DA4C281BF6CAAA0057D570 /* PlayView.h */,
-				85DA4C291BF6CAAA0057D570 /* PlayView.m */,
 				85DA4C3B1BF730130057D570 /* CarListCell.h */,
 				85DA4C3C1BF730130057D570 /* CarListCell.m */,
 			);
@@ -611,6 +609,8 @@
 				854A34021BF5DFCB0027B08A /* ManHuaViewController.m */,
 				854A340E1BF615DB0027B08A /* ManHuaDetailViewController.h */,
 				854A340F1BF615DB0027B08A /* ManHuaDetailViewController.m */,
+				85DAEC121BF9673000911E6F /* CarViewController.h */,
+				85DAEC131BF9673000911E6F /* CarViewController.m */,
 				85E3A2151BEB1E930082B62E /* LeftViewController.h */,
 				85E3A2161BEB1E930082B62E /* LeftViewController.m */,
 			);
@@ -692,6 +692,19 @@
 				85DA4C221BF6CA1F0057D570 /* XiMaCategoryViewModel.m */,
 			);
 			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
+		85DAEC111BF95EE200911E6F /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+				85DA4C141BF6C9FA0057D570 /* XiMaCategoryCell.h */,
+				85DA4C151BF6C9FA0057D570 /* XiMaCategoryCell.m */,
+				85DA4C251BF6CAA00057D570 /* MusicDetailCell.h */,
+				85DA4C261BF6CAA00057D570 /* MusicDetailCell.m */,
+				85DA4C281BF6CAAA0057D570 /* PlayView.h */,
+				85DA4C291BF6CAAA0057D570 /* PlayView.m */,
+			);
+			name = "喜马拉雅";
 			sourceTree = "<group>";
 		};
 		DEB62B47C560AA65E07ECFA4 /* Pods */ = {
@@ -902,6 +915,7 @@
 				8584743E1BEC6A4300B54A08 /* WMFooldView.m in Sources */,
 				85887C221BF3702300E02E75 /* WXMobilePhoneNetManager.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
+				85DAEC141BF9673000911E6F /* CarViewController.m in Sources */,
 				85DA4C231BF6CA1F0057D570 /* XiMaAlbumViewModel.m in Sources */,
 				85C9BF9B1BF4507C00D5A6BD /* MobilePhoneViewModel.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TRImageView.h"
 @interface BigImgCell : UITableViewCell
-/** 左侧图片*/
+/** 大图片*/
 @property (nonatomic,strong)TRImageView *iconIV;
 /** 题目标签*/
 @property (nonatomic,strong)UILabel *titleLb;

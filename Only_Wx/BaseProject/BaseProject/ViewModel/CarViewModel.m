@@ -10,52 +10,47 @@
 
 @implementation CarViewModel
 
-//- (NSArray *)adsImgsrc {
-//    if(_adsImgsrc == nil) {
-//        _adsImgsrc = [NSArray new];
-//        
-//    }
-//    return _adsImgsrc;
-//}
-
-- ( WXCarListModel *)modelForRow:(NSInteger)row
+- (WXCarListModel *)modelForArr:(NSArray *)arr row:(NSInteger)row
 {
-    return  self.dataArr[row];
+    return arr[row];
 }
+
+
 /** ads数组*/
 - (NSArray *)adsForRow:(NSInteger)row
 {
-    return [self modelForRow:row].ads;
+    return [self modelForArr:self.dataArr row:row].ads;
 }
-
-/** imgextra数组*/
+/** 是否存在Imagxtra数组*/
+- (BOOL)containImgextra:(NSInteger)row
+{
+    if ([self modelForArr:self.dataArr row:row].imgextra == nil) {
+        return NO;
+    }
+    return YES;
+}
+/** 通过行数 返回此行中对应的图片链接数组 */
 - (NSArray *)imgextraForRow:(NSInteger)row
 {
-    return [self modelForRow:row].imgextra;
+    NSArray *arr = [self modelForArr:self.dataArr row:row].imgextra;
+    NSMutableArray *array = [NSMutableArray new];
+    for (int i = 0; i < arr.count; i ++) {
+        WXCarListImageXtraModel *model = arr[i];
+        [array addObject:model.imgsrc];
+    }
+    return [array copy];
 }
 /** auto_wap数组*/
 - (NSArray *)autowapForRow:(NSInteger)row
 {
-    return [self modelForRow:row].auto_wap;
+    return [self modelForArr:self.dataArr row:row].auto_wap;
 }
 
-// 获取广告图
-- (NSURL *)adsImgsrcForRow:(NSInteger)row
-{
-    WXCarListAdsModel *model = [self adsForRow:row][row];
-    
-    return [NSURL URLWithString:model.imgsrc];
-}
 /** 获取imgextra图*/
 - (NSURL *)imgextraURLForRow:(NSInteger)row
 {
-    WXCarListImageXtraModel *model = [self imgextraForRow:row][row];
-    return [NSURL URLWithString:model.imgsrc];
-}
-/** 获取auto_wap图*/
-- (NSURL *)autowapURLForRow:(NSInteger)row
-{
-    WXCarListAutoWapModel *model = [self autowapForRow:row][row];
+   WXCarListImageXtraModel *model = [self imgextraForRow:row][0];
+    
     return [NSURL URLWithString:model.imgsrc];
 }
 
@@ -65,30 +60,30 @@
 {
     return  self.dataArr.count;
 }
-
-
 - (NSString *)titleForRow:(NSInteger)row
 {
-    return [self modelForRow:row].title;
+    return [self modelForArr:self.dataArr row:row].title;
 }
 - (NSString *)replyCountForRow:(NSInteger)row
 {
-    return @([self modelForRow:row].replyCount).stringValue;
+    return @([self modelForArr:self.dataArr row:row].replyCount).stringValue;
 }
 - (NSString *)digestForRow:(NSInteger)row
 {
-    return [self modelForRow:row].digest;
+    return [self modelForArr:self.dataArr row:row].digest;
 }
 - (NSURL *)iconIVURLForRow:(NSInteger)row
 {
-    return [NSURL URLWithString:[self modelForRow:row].imgsrc];
+    return [NSURL URLWithString:[self modelForArr:self.dataArr row:row].imgsrc];
 }
+
+
+
 /** 获取列表中某行数据对应的下一页链接 */
 - (NSURL *)detailURLForRowInList:(NSInteger)row
 {
-    return [NSURL URLWithString:[self modelForRow:row].url_3w];
+    return [NSURL URLWithString:[self modelForArr:self.dataArr row:row].url_3w];
 }
-
 - (void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle
 {
     self.dataTask = [CarNetManager getCarWithIndex:_index completionHandle:^( WXCarModel *model, NSError *error) {
@@ -96,6 +91,7 @@
             [self.dataArr removeAllObjects];
         }
         [self.dataArr addObjectsFromArray:model.list];
+        
         completionHandle(error);
     }];
 }

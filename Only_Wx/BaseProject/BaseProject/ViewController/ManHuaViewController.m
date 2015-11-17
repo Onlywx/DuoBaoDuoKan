@@ -24,7 +24,8 @@
     static UINavigationController *navi = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ManHuaViewController *vc = [[ManHuaViewController alloc]init];                         navi = [[UINavigationController alloc] initWithRootViewController:vc];
+        ManHuaViewController *vc = [[ManHuaViewController alloc]init];
+        navi = [[UINavigationController alloc] initWithRootViewController:vc];
     });
     return navi;
 
@@ -95,14 +96,6 @@ kRemoveCellSeparator
         return cell;
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
     MobilePhoneListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.titleLb.text = [self.phoneVM titleForRow:indexPath.row];
     cell.digestLb.text = [self.phoneVM digestForRow:indexPath.row];
@@ -133,7 +126,6 @@ kRemoveCellSeparator
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"漫画";
     [Factory addMenuItemToVC:self];
     self.tableView.hidden = NO;

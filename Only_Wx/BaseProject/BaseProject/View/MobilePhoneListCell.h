@@ -1,7 +1,7 @@
 //
 //  MobilePhoneListCell.h
 //  BaseProject
-//
+//  所有有左侧图片、题目标签、摘要标签、跟帖数标签的cell
 //  Created by tarena on 15/11/12.
 //  Copyright © 2015年 Tarena. All rights reserved.
 //

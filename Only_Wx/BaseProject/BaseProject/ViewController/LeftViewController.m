@@ -11,6 +11,7 @@
 #import "MainViewController.h"
 #import "ManHuaViewController.h"
 #import "RankListViewController.h"
+#import "CarViewController.h"
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *itemNames;
@@ -68,7 +69,8 @@ kRemoveCellSeparator
 
             break;
         case 2:
-            
+            [self.sideMenuViewController setContentViewController:[CarViewController standardCarNavi]animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
             break;
         case 3:
             
