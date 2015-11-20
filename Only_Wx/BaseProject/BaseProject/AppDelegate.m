@@ -24,21 +24,31 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initializeWithApplication:application];
 
-    [WXMobilePhoneNetManager getMobilePhoneWithIndex:0 completionHandle:^(id model, NSError *error) {
-        DDLogVerbose(@"....");
-    }];
-    [CarNetManager getCarWithIndex:0 completionHandle:^(id model, NSError *error) {
-        DDLogVerbose(@"...");
-    }];
-   // WelcomeViewController *vc = [WelcomeViewController new];
-    //self.window.rootViewController = vc;
-    self.window.rootViewController = self.sideMenu;
+//    [WXMobilePhoneNetManager getMobilePhoneWithIndex:0 completionHandle:^(id model, NSError *error) {
+//        DDLogVerbose(@"....");
+//    }];
+//    [CarNetManager getCarWithIndex:0 completionHandle:^(id model, NSError *error) {
+//        DDLogVerbose(@"...");
+//    }];
+    
+    NSDictionary *infoDic = [[NSBundle mainBundle]infoDictionary];
+    NSString *key = @"CFBundleShortVersionString";
+    NSString *currentVersion = infoDic[key];
+    NSString *runVersion=[[NSUserDefaults standardUserDefaults] stringForKey:key];
+    if (runVersion==nil || ![runVersion isEqualToString:currentVersion] ) {
+        //没运行过 或者 版本号不一致，则显示欢迎页
+        NSLog(@"显示欢迎页,window根视图设置为欢迎控制器对象");
+        WelcomeViewController *vc = [WelcomeViewController new];
+        self.window.rootViewController = vc;
+        //保存新的版本号,防止下次运行再显示欢迎页
+        [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:key];
+    }else{
+        NSLog(@"显示主页面,window根视图设置为主页面控制器对象");
+            self.window.rootViewController = self.sideMenu;
+    }
+
+//    self.window.rootViewController = self.sideMenu;
         [self configGlobalUIStyle]; //配置全局UI样式
-    
-    
-    
-    
-    
     return YES;
 }
 /** 配置全局UI的样式 */

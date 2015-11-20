@@ -21,17 +21,34 @@
 - (NSURL *)detailURLForRowInList:(NSInteger)row;
 
 
+- (NSInteger)adsNumber:(NSInteger)row;
 
-/** ads数组*/
-- (NSArray *)adsForRow:(NSInteger)row;
+/** 通过行数 返回此行中对应的ads数组中的图片*/
+- (NSArray *)adsImgsrcForRow:(NSInteger)row;
+/** 通过行数 返回此行中对应的ads数组中的题目*/
+- (NSArray *)adsTitleForRow:(NSInteger)row;
+
 /** 通过行数 返回此行中对应的图片链接数组 */
 - (NSArray *)imgextraForRow:(NSInteger)row;
-/** auto_wap数组*/
+/** 通过行数 返回此行中对应的auto_wap数组*/
 - (NSArray *)autowapForRow:(NSInteger)row;
-
 
 /** 是否存在imgextra*/
 - (BOOL)containImgextra:(NSInteger)row;
+/** 是否存在ads*/
+- (BOOL)containAds:(NSInteger)row;
+/** 是否存在auto_wap*/
+- (BOOL)containAuto_wqp:(NSInteger)row;
+
+
+
+
+
+
+
+
+
+
 
 
 

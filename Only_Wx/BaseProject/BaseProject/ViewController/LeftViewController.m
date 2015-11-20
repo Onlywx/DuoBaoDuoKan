@@ -12,14 +12,22 @@
 #import "ManHuaViewController.h"
 #import "RankListViewController.h"
 #import "CarViewController.h"
-@interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
+#import "XiaoShuoViewController.h"
+#import "BiZhiViewController.h"
+#import "BiZhiDetailViewController.h"
+@interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource,BiZhiDetailControllerDelegate>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *itemNames;
 @end
 
 @implementation LeftViewController
+- (void)biZhiController:(BiZhiDetailViewController *)biZhiVC changeBiZhi:(UIImage *)image
+{
+    self.backImageView.image = image;
+}
+
 - (NSArray *)itemNames{
-    return @[@"手机", @"漫画", @"汽车", @"健康",@"音乐"];
+    return @[@"手机", @"漫画", @"汽车",@"音乐",@"小说", @"设置壁纸"];
 }
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -32,14 +40,15 @@
         [self.view addSubview:_tableView];
         _tableView.backgroundColor=[UIColor clearColor];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(kWindowW/2, kWindowH/3));
-            make.centerY.mas_equalTo(50);
+            make.size.mas_equalTo(CGSizeMake(kWindowW/2, kWindowH/2));
+            make.centerY.mas_equalTo(80);
             
             make.left.mas_equalTo(10);
         }];
         //去掉分割线
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     }
+    
     return _tableView;
 }
 #pragma mark - UITableView
@@ -73,11 +82,20 @@ kRemoveCellSeparator
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 3:
-            
-            break;
-        case 4:
             [self.sideMenuViewController setContentViewController:[RankListViewController defaultNavi] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 4:
+            [self.sideMenuViewController setContentViewController:[XiaoShuoViewController defaultNavi] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+
+        case 5:
+        {
+            BiZhiViewController *bizhiVC = [BiZhiViewController new];
+            [self.sideMenuViewController setContentViewController:[bizhiVC defaultNavi] animated:YES];
+            bizhiVC.bizhi.delegate = self;
+            [self.sideMenuViewController hideMenuViewController];
+        }
 
             break;
         default:
@@ -91,7 +109,10 @@ kRemoveCellSeparator
     
     self.view.backgroundColor = [UIColor greenSeaColor];
     
-    UIImageView *imageViewbk = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"7132"]];
+    
+    UIImageView *imageViewbk = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bizhi0"]];
+    self.backImageView = imageViewbk;
+    self.backImageView.userInteractionEnabled = YES;
     [self.view addSubview:imageViewbk];
     [imageViewbk mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
@@ -109,15 +130,6 @@ kRemoveCellSeparator
         make.left.mas_equalTo(20);
         make.size.mas_equalTo(CGSizeMake(kWindowW/2+50, 50));
     }];
-    UILabel *label = [UILabel new];
-    [footView addSubview:label];
-    label.font = [UIFont systemFontOfSize:20];
-    label.textColor = [UIColor yellowColor];
-    label.text = @"我的地盘我做主";
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
-    }];
-    
     [self.view addSubview:headView];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"touxiang3"]];
     

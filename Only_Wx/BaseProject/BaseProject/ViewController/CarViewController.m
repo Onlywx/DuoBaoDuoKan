@@ -11,12 +11,17 @@
 #import "CarViewModel.h"
 #import "Factory.h"
 #import "CarListCell.h"
+#import "CarDetailViewController.h"
+#import "BigImgCell.h"
 @interface CarViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)CarViewModel *cVM;
 @end
 
 @implementation CarViewController
+
+
+
 + (UINavigationController *)standardCarNavi
 {
     static UINavigationController *navi = nil;
@@ -32,13 +37,14 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        
         [self.view addSubview:_tableView];
 
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
         }];
         _tableView.backgroundColor = [UIColor greenSeaColor];
-        
+    
         _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self.cVM refreshDataCompletionHandle:^(NSError *error) {
                 if (error) {
@@ -54,19 +60,21 @@
         
         _tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
             [self.cVM getMoreDataCompletionHandle:^(NSError *error) {
-                if (error) {
+              
                     if (error) {[self showErrorMsg:error.localizedDescription];
                     }else{
-                        [self.tableView reloadData];
+                        [_tableView reloadData];
                         
                         [_tableView.footer endRefreshing];
                     }
-                }
+                
             }];
         }];
     }
     [_tableView registerClass:[MobilePhoneListCell class] forCellReuseIdentifier:@"Cell"];
-    [_tableView registerClass:[CarListCell class] forCellReuseIdentifier:@"BigCell"];
+    [_tableView registerClass:[CarListCell class] forCellReuseIdentifier:@"ThreeCell"];
+    [_tableView registerClass:[BigImgCell class] forCellReuseIdentifier:@"BigCell"];
+
     return _tableView;
 }
 
@@ -84,18 +92,32 @@ kRemoveCellSeparator
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    
+    
+    
+    
+    if (indexPath.row == 0) {
+        BigImgCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BigCell"];
+        cell.titleLb.text = [self.cVM titleForRow:indexPath.row];
+        [cell.iconIV.imageView setImageWithURL:[self.cVM iconIVURLForRow:indexPath.row]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
+        return cell;
+
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     if ([self.cVM containImgextra:indexPath.row]) {
-        CarListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BigCell"];
+        CarListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ThreeCell"];
         cell.titleLb.text = [self.cVM titleForRow:indexPath.row];
         cell.replyCountLb.text = [NSString stringWithFormat:@"%@跟帖",[self.cVM replyCountForRow:indexPath.row]];
         [cell.iconIV0.imageView setImageWithURL:[self.cVM iconIVURLForRow:indexPath.row]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
-       // [cell.iconIV1.imageView setImage:[UIImage imageNamed:@"10979715_0800"]];
         [cell.iconIV1.imageView setImageWithURL:[self.cVM imgextraForRow:indexPath.row][0]
          placeholderImage:[UIImage imageNamed:@"angle-mask"]];
-       // cell.iconIV1.imageView.backgroundColor = [UIColor redColor];
-        //cell.iconIV2.imageView.backgroundColor = [UIColor grayColor];
-        
-        NSLog(@"%@",[self.cVM imgextraForRow:indexPath.row][0]);
         
         [cell.iconIV2.imageView setImageWithURL:[self.cVM imgextraForRow:indexPath.row][1]placeholderImage:[UIImage imageNamed:@"angle-mask"]];
 
@@ -118,14 +140,20 @@ kRemoveCellSeparator
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row == 0) {
+        return 200;
+    }
     return [self.cVM containImgextra:indexPath.row]?135:90;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-   
+    CarDetailViewController *vc = [[CarDetailViewController alloc]initWithURL:[self.cVM detailURLForRowInList:indexPath.row]];
+
+    [self.navigationController pushViewController:vc animated:YES];
+    
+
     
 //    ManHuaDetailViewController *vc=[[ManHuaDetailViewController alloc] initWithURL:[self.phoneVM detailURLForRowInList:indexPath.row]];
 //    [self.navigationController pushViewController:vc animated:YES];

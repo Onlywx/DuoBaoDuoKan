@@ -16,11 +16,7 @@
 }
 
 
-/** ads数组*/
-- (NSArray *)adsForRow:(NSInteger)row
-{
-    return [self modelForArr:self.dataArr row:row].ads;
-}
+
 /** 是否存在Imagxtra数组*/
 - (BOOL)containImgextra:(NSInteger)row
 {
@@ -29,6 +25,25 @@
     }
     return YES;
 }
+/** 是否存在ads数组*/
+- (BOOL)containAds:(NSInteger)row
+{
+    if ([self modelForArr:self.dataArr row:row].ads == nil) {
+     
+        return NO;
+    }
+    return YES;
+}
+/** 是否存在auto_wap数组*/
+- (BOOL)containAuto_wqp:(NSInteger)row
+{
+    if ([self modelForArr:self.dataArr row:row].auto_wap == nil) {
+        return NO;
+    }
+    return YES;
+}
+
+
 /** 通过行数 返回此行中对应的图片链接数组 */
 - (NSArray *)imgextraForRow:(NSInteger)row
 {
@@ -40,18 +55,38 @@
     }
     return [array copy];
 }
-/** auto_wap数组*/
+/** 通过行数 返回此行中对应的ads数组中的图片*/
+- (NSArray *)adsImgsrcForRow:(NSInteger)row
+{
+    NSArray *arr = [self modelForArr:self.dataArr row:row].ads;
+    NSMutableArray *array = [NSMutableArray new];
+    
+    for (int i = 0; i < arr.count; i ++) {
+        WXCarListAdsModel *model = arr[i];
+        [array addObject:model.imgsrc];
+    }
+    return [array copy];
+
+}
+/** 通过行数 返回此行中对应的ads数组中的题目*/
+- (NSArray *)adsTitleForRow:(NSInteger)row
+{
+    NSArray *arr = [self modelForArr:self.dataArr row:row].ads;
+    NSMutableArray *array = [NSMutableArray new];
+    
+    for (int i = 0; i < arr.count; i ++) {
+        WXCarListAdsModel *model = arr[i];
+        [array addObject:model.title];
+    }
+    return [array copy];
+    
+}
+
+
+/** 通过行数 返回此行中对应的auto_wap数组*/
 - (NSArray *)autowapForRow:(NSInteger)row
 {
     return [self modelForArr:self.dataArr row:row].auto_wap;
-}
-
-/** 获取imgextra图*/
-- (NSURL *)imgextraURLForRow:(NSInteger)row
-{
-   WXCarListImageXtraModel *model = [self imgextraForRow:row][0];
-    
-    return [NSURL URLWithString:model.imgsrc];
 }
 
 
@@ -91,7 +126,6 @@
             [self.dataArr removeAllObjects];
         }
         [self.dataArr addObjectsFromArray:model.list];
-        
         completionHandle(error);
     }];
 }

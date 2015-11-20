@@ -11,6 +11,7 @@
 @interface MusicListViewController : UIViewController
 - (instancetype)initWithAlbumId:(NSInteger)albumId;
 @property(nonatomic) NSInteger albumId;
+@property (nonatomic,strong)NSString *title;
 @end
 
 

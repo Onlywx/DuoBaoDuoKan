@@ -14,6 +14,7 @@
 @interface MusicListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) XiMaAlbumViewModel *albumVM;
 @property(nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong)PlayView *playView;
 @end
 @implementation MusicListViewController
 - (XiMaAlbumViewModel *)albumVM{
@@ -63,7 +64,6 @@
         }];
     }
     _tableView.backgroundColor = [UIColor greenSeaColor];
-
     return _tableView;
 }
 
@@ -79,6 +79,9 @@
     // Do any additional setup after loading the view.
     [Factory addBackItemToVC:self];
     [self.tableView.header beginRefreshing];
+    self.navigationController.title = self.title;
+    
+    
 //添加播放控制视图
     [self.view addSubview:[PlayView sharedInstance]];
     [[PlayView sharedInstance] mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,6 +104,7 @@
     cell.favorCountLb.text=[self.albumVM favorCountForRow:indexPath.row];
     cell.commentCountLb.text=[self.albumVM commentCountForRow:indexPath.row];
     cell.durationLb.text = [self.albumVM durationForRow:indexPath.row];
+
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -116,14 +120,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LeftViewController : UIViewController
+@property (nonatomic,strong)UIImageView *backImageView;
 
 @end

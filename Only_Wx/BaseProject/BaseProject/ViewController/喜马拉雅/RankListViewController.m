@@ -11,7 +11,6 @@
 #import "XiMaCategoryViewModel.h"
 #import "MusicListViewController.h"
 #import "Factory.h"
-
 @interface RankListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) XiMaCategoryViewModel *ximaVM;
@@ -29,6 +28,9 @@
         _tableView=[[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+/*啊坤诚呐 同学说了 行高一样用rowheight 不然影响效率啊
+    所以这里删除了返回高度的协议方法，改为rowHeight
+ */
         _tableView.rowHeight = 170/2;
         _tableView.estimatedRowHeight = 170/2;
         
@@ -81,6 +83,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [Factory addMenuItemToVC:self];
     self.title = @"音乐TOP50";
     [self.tableView.header beginRefreshing];
@@ -102,11 +105,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MusicListViewController *vc =[[MusicListViewController alloc] initWithAlbumId:[self.ximaVM albumIdForRow:indexPath.row]];
+    vc.title=[self.ximaVM titleForRow:indexPath.row];
+    
+
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];      
+    [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 

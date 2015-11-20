@@ -53,14 +53,9 @@
         [_btn setTitle:@"点击，享受生活" forState:0];
         [_btn bk_addEventHandler:^(id sender) {
             
-            UINavigationController *vc = [MainViewController standardPhoneNavi];
-            
-          //MainViewController *vc = [MainViewController new];
-            [self presentViewController:vc animated:YES completion:^{
-                [UIApplication sharedApplication].keyWindow.rootViewController = vc;
-            }];
-
-            
+                              self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+            self.window.rootViewController = [AppDelegate new].sideMenu;
+            [self.window makeKeyAndVisible];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _btn;
